@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="20dip"
+        android:text="Favourite:"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        android:id="@+id/settingsFavoriteTextView"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_below="@+id/settingsFavoriteTextView"
+        android:id="@+id/settingsFavoriteSpinner"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="30dip"
+        android:layout_below="@+id/settingsFavoriteSpinner"
+        android:text="History:"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        android:id="@+id/settingsHistoryTextView"/>
+
+    <Switch
+        android:id="@+id/settingsHistorySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dip"
+        android:layout_below="@+id/settingsHistoryTextView"/>
+
+</RelativeLayout>

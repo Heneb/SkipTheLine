@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/mainTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="20dip"
+        android:text="Current Queue:"
+        android:textSize="20dip"
+        android:textStyle="bold" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/queueGraph"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_below="@+id/mainTitleTextView"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dip" />
+
+    <RelativeLayout
+        android:id="@+id/statusRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/queueGraph"
+        android:layout_marginTop="15dip">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/statusRefreshLabelTextView"
+            android:layout_marginLeft="5dip"
+            android:id="@+id/dateSpinner">
+
+        </Spinner>
+
+        <TextView
+            android:id="@+id/statusRefreshLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@+id/statusRefreshTimeTextView"
+            android:text="Last Refresh:" />
+
+        <TextView
+            android:id="@+id/statusRefreshTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:text="12:18"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/statusRefreshLayout"
+        android:layout_marginTop="50dip">
+
+        <TextView
+            android:id="@+id/statusReminderLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dip"
+            android:text="Reminder:"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/statusReminderSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip" />
+
+        <TextView
+            android:id="@+id/statusReminderNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/statusReminderLabelTextView"
+            android:layout_marginTop="15dip"
+            android:layout_alignParentLeft="true"
+            android:text="Number:"
+            android:layout_marginLeft="10dip" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dip"
+            android:layout_marginRight="10dip"
+            android:layout_below="@+id/statusReminderSwitch"
+            android:id="@+id/statusReminderNumberSpinner"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/statusReminderNumberTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="10dip"
+            android:text="Time:"
+            android:id="@+id/statusReminderTimeTextView"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dip"
+            android:layout_marginRight="10dip"
+            android:layout_below="@+id/statusReminderNumberSpinner"
+            android:id="@+id/statusReminderTimeSpinner"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

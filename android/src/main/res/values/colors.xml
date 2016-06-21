@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="statusLedRed">#FF0000</color>
+    <color name="statusLedGreen">#00FF00</color>
+    <color name="statusLedBorder">#444444</color>
+    <color name="headlineText">#FFFFFF</color>
+    <color name="graphHistory">#FF0000</color>
+    <color name="graphActual">#00B33C</color>
+</resources>
+
+<!--
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="statusLedRed">#FF0000</color>
+    <color name="statusLedGreen">#00FF00</color>
+    <color name="statusLedBorder">#444444</color>
+    <color name="headlineText">#FFFFFF</color>
+    <color name="graphHistory">#FF0000</color>
+    <color name="graphActual">#00B33C</color>
+</resources>
+!-->
