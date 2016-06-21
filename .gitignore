@@ -13,3 +13,6 @@
 
 
 
+android/target/
+objects/target/
+server/target/
