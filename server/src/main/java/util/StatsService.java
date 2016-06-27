@@ -29,7 +29,13 @@ public class StatsService
     amounts = new ArrayList<>();
   }
 
-  public void add(int pAmount)
+  /**
+   * Trägt die übergebene Anzahl der Wartenden in die Datenbank ein
+   *
+   * @param pAmount  Anzahl der Wartenden
+   * @param pWeekDay Zeitpunkt der Messung
+   */
+  public void add(int pAmount, int pWeekDay)
   {
     long current = System.currentTimeMillis();
 
@@ -41,7 +47,7 @@ public class StatsService
       int sum = 0;
       for (Integer amount : amounts)
         sum += amount;
-      BoxRegistry.STATS.insert(new StatsEntry(sum / amounts.size(), lastUpdate));
+      BoxRegistry.STATS.insert(new StatsEntry(sum / amounts.size(), lastUpdate, pWeekDay));
       lastUpdate = current;
       amounts.clear();
     }

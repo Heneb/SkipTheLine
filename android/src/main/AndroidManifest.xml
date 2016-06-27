@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.bhoeft.skip_the_line">
+    package="com.bhoeft.skip_the_line">
 
-    <uses-sdk android:minSdkVersion="23"
-              android:targetSdkVersion="23"
-              android:maxSdkVersion="23" />
+  <uses-sdk android:minSdkVersion="23"
+      android:targetSdkVersion="23"
+      android:maxSdkVersion="23"/>
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.BLUETOOTH"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-    <application
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme">
-        <activity
-                android:name=".MainActivity"
-                android:label="@string/app_name"
-                android:screenOrientation="portrait"
-                android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+  <application
+      android:allowBackup="true"
+      android:icon="@drawable/icon"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:debuggable="true"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".ui.MainActivity"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
 
-        <service android:enabled="true" android:exported="true" android:isolatedProcess="false" android:label="beacon"
-                 android:name="org.altbeacon.beacon.service.BeaconService"/>
-        <service android:enabled="true" android:name="org.altbeacon.beacon.BeaconIntentProcessor"/>
+    <service android:enabled="true" android:exported="true" android:isolatedProcess="false" android:label="beacon"
+        android:name="org.altbeacon.beacon.service.BeaconService"/>
+    <service android:enabled="true" android:name="org.altbeacon.beacon.BeaconIntentProcessor"/>
 
-    </application>
-
+    <receiver android:name=".services.NotificationPublisher"/>
+  </application>
 
 
 </manifest>

@@ -1,62 +1,120 @@
 <resources>
-    <string name="app_name">MCApp_FragmentTest</string>
-    <string name="action_settings">Settings</string>
+  <string name="app_name">SkipTheLine</string>
+  <string name="action_settings">Settings</string>
 
-    <string-array name="reminderNumberArray">
-        <item>&lt; 10</item>
-        <item>&lt; 20</item>
-        <item>&lt; 30</item>
-        <item>&lt; 40</item>
-    </string-array>
+  <string-array name="reminderNumberArray">
+    <item>0</item>
+    <item>5</item>
+    <item>10</item>
+    <item>15</item>
+    <item>20</item>
+    <item>25</item>
+    <item>30</item>
+    <item>35</item>
+    <item>40</item>
+    <item>45</item>
+    <item>50</item>
+    <item>55</item>
+    <item>60</item>
+    <item>65</item>
+    <item>70</item>
+    <item>75</item>
+    <item>80</item>
+    <item>85</item>
+    <item>90</item>
+    <item>95</item>
+    <item>100</item>
+  </string-array>
 
-    <string-array name="reminderTitleArray">
-        <item>11:30</item>
-        <item>12:00</item>
-        <item>12:30</item>
-        <item>13:00</item>
-        <item>13:30</item>
-    </string-array>
+  <string-array name="reminderTitleArrayTHD">
+    <item>11:30</item>
+    <item>12:00</item>
+    <item>12:30</item>
+    <item>13:00</item>
+    <item>13:30</item>
+  </string-array>
 
-    <string-array name="favoriteRestaurantArray">
-        <item>TH Deggendorf</item>
-        <item>HS Landshut</item>
-        <item>Uni Passau</item>
-        <item>Cafeteria Nikolakloster</item>
-        <item>OTH Regensburg</item>
-        <item>Cafeteria Prüfeningerstraße</item>
-        <item>Uni Regensburg</item>
-        <item>Cafeteria PT</item>
-        <item>Cafeteria Chemie</item>
-        <item>Cafeteria Sammelgebäude</item>
-        <item>Cafeteria Sport</item>
-        <item>WZ Straubing</item>
-    </string-array>
+  <string-array name="reminderTitleArrayHAWL">
+    <item>11:30</item>
+    <item>12:00</item>
+    <item>12:30</item>
+    <item>13:00</item>
+    <item>13:30</item>
+  </string-array>
 
-    <string-array name="menuLinks">
-        <item>http://www.stwno.my-mensa.de/chooser.php?v=4879165&amp;hyp=1&amp;lang=de&amp;mensa=all#start</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_th_deg_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_th_lh_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_th_passau_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#cnkl_passau_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_hs_reg_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#c_prstr_reg_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_uni_reg_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#cafe_pt_reg_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#cafe_chemie_reg_tage</item>
-        <item></item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#cafe_sport_reg_tage</item>
-        <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#wz_str_tage</item>
-    </string-array>
+  <string-array name="reminderTitleArray">
+    <item>11:30</item>
+    <item>12:00</item>
+    <item>12:30</item>
+    <item>13:00</item>
+    <item>13:30</item>
+    <item>14:00</item>
+  </string-array>
 
-    <string-array name="pickerDates">
-        <item>Mo-23.05.</item>
-        <item>Di-24.05.</item>
-        <item>Mi-25.05.</item>
-        <item>Do-26.05.</item>
-        <item>Fr-27.05.</item>
-        <item>Sa-28.05.</item>
-        <item>So-29.05.</item>
-        <item>Mo-30.05.</item>
-    </string-array>
+  <string-array name="favoriteRestaurantArray">
+    <item>TH Deggendorf</item>
+    <item>HAW Landshut</item>
+    <item>Uni Passau</item>
+    <item>Cafeteria Nikolakloster</item>
+    <item>OTH Regensburg</item>
+    <item>Cafeteria Prüfeningerstraße</item>
+    <item>Uni Regensburg</item>
+    <item>Cafeteria PT</item>
+    <item>Cafeteria Chemie</item>
+    <item>Cafeteria Sammelgebäude</item>
+    <item>Cafeteria Sport</item>
+    <item>WZ Straubing</item>
+  </string-array>
+
+  <string-array name="menuLinks">
+    <item>http://www.stwno.my-mensa.de/chooser.php?v=4879165&amp;hyp=1&amp;lang=de&amp;mensa=all#start</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_th_deg_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_th_lh_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_th_passau_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#cnkl_passau_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_hs_reg_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#c_prstr_reg_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#m_uni_reg_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#cafe_pt_reg_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#cafe_chemie_reg_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#cafe_sport_reg_tage</item>
+    <item>http://www.stwno.my-mensa.de/index.php?v=4879118&amp;hyp=1#wz_str_tage</item>
+  </string-array>
+
+  <string-array name="pickerDates">
+    <item>Sonntag</item>
+    <item>Montag</item>
+    <item>Dienstag</item>
+    <item>Mittwoch</item>
+    <item>Donnerstag</item>
+    <item>Freitag</item>
+    <item>Samstag</item>
+  </string-array>
+
+  <string name="error_get_currentAvg">Server-Fehler: Die aktuelle Länge kann nicht geladen werden</string>
+  <string name="error_get_currentGraph">Server-Fehler: Die aktuelle Warteschlangengraph kann nicht geladen werden</string>
+  <string name="error_get_historyGraph">Server-Fehler: Der durchschnittliche Warteschlangengraph kann nicht geladen werden</string>
+  <string name="error_fetch_history">Server-Fehler: Daten können nicht abgerufen werden</string>
+  <string name="error_unknown">Ein unbekannter Fehler mit dem Server ist aufgetreten</string>
+
+  <string name="notificationTitle">Zeit zum Essen gehen</string>
+  <string name="notificationBodyTime">Die Warteschlange ist zu lang, aber die Zeit…</string>
+  <string name="notifcationBodyAmount">Die Warteschlange ist kleiner geworden. Glückwunsch!</string>
+  <string name="fragmentTabTitleMenu">Speiseplan</string>
+  <string name="fragmentTabTitleMain">Status</string>
+  <string name="fragmentTabTitleSettings">Einstellungen</string>
+  <string name="fragment_main_layout_less_then">&lt;</string>
+  <string name="app_title">Skip The Line</string>
+  <string name="no_connection_msg">Keine Internetverbindung gefunden. Bitte aktivieren und die App neu starten</string>
+  <string name="current_queue">Warteschlange:</string>
+  <string name="refresh_button">Aktualisieren</string>
+  <string name="last_refresh">Letzte Aktualisierung:</string>
+  <string name="refresh_time_init">0:00</string>
+  <string name="reminder_title">Erinnerung:</string>
+  <string name="amount_title">Anzahl:</string>
+  <string name="time_title">Zeit:</string>
+  <string name="time_button_init">0:00</string>
+  <string name="favorite_title">Favorit:</string>
+  <string name="history_title">Durchschnittsdaten:</string>
 
 </resources>

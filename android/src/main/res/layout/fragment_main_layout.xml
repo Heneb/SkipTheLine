@@ -4,122 +4,210 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/mainHeadline">
+
     <TextView
         android:id="@+id/mainTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dip"
-        android:layout_marginTop="20dip"
-        android:text="Current Queue:"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="15dip"
+        android:text="@string/current_queue"
         android:textSize="20dip"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/queueGraph"
-        android:layout_width="match_parent"
-        android:layout_height="200dip"
-        android:layout_below="@+id/mainTitleTextView"
+    <Button
+        android:id="@+id/statusRefreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_toLeftOf="@+id/mainTitleTextView"
+        android:text="@string/refresh_button"
+        android:textStyle="bold"/>
+
+  </RelativeLayout>
+
+  <com.jjoe64.graphview.GraphView
+      android:id="@+id/queueGraph"
+      android:layout_width="match_parent"
+      android:layout_height="200dip"
+      android:layout_below="@+id/mainHeadline"
+      android:layout_marginLeft="5dip"
+      android:layout_marginRight="5dip"
+      android:layout_marginTop="10dip"/>
+
+  <ProgressBar
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/drawGraphProgress"
+      android:visibility="invisible"
+      android:layout_alignBottom="@+id/queueGraph"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="73dp"/>
+
+  <RelativeLayout
+      android:id="@+id/statusRefreshLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/queueGraph"
+      android:layout_marginTop="15dip">
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/statusRefreshLabelTextView"
         android:layout_marginLeft="5dip"
-        android:layout_marginRight="5dip"
-        android:layout_marginTop="5dip" />
+        android:id="@+id/dateSpinner">
 
-    <RelativeLayout
-        android:id="@+id/statusRefreshLayout"
+    </Spinner>
+
+    <TextView
+        android:id="@+id/statusRefreshLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@+id/statusRefreshTimeTextView"
+        android:text="@string/last_refresh"/>
+
+    <TextView
+        android:id="@+id/statusRefreshTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:text="@string/refresh_time_init"
+        android:textStyle="bold"/>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="15dip"
+      android:layout_marginBottom="15dip"
+      android:layout_below="@+id/statusRefreshLayout"
+      android:id="@+id/statusSeparator">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/mainSeparator"/>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/statusSeparator">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/queueGraph"
-        android:layout_marginTop="15dip">
+        android:orientation="horizontal"
+        android:id="@+id/reminderLayout">
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/statusRefreshLabelTextView"
-            android:layout_marginLeft="5dip"
-            android:id="@+id/dateSpinner">
+      <TextView
+          android:id="@+id/statusReminderLabelTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="10dip"
+          android:text="@string/reminder_title"
+          android:textSize="20dip"
+          android:textStyle="bold"/>
 
-        </Spinner>
+      <View
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+      />
 
-        <TextView
-            android:id="@+id/statusRefreshLabelTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dip"
-            android:layout_toLeftOf="@+id/statusRefreshTimeTextView"
-            android:text="Last Refresh:" />
+      <Switch
+          android:id="@+id/statusReminderSwitch"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="10dip"/>
 
-        <TextView
-            android:id="@+id/statusRefreshTimeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dip"
-            android:text="12:18"
-            android:textStyle="bold" />
+    </LinearLayout>
 
-    </RelativeLayout>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/statusRefreshLayout"
-        android:layout_marginTop="50dip">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminderLayout"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal"
+        android:id="@+id/numberLayout">
 
-        <TextView
-            android:id="@+id/statusReminderLabelTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dip"
-            android:text="Reminder:"
-            android:textSize="20dip"
-            android:textStyle="bold" />
+      <TextView
+          android:id="@+id/statusReminderNumberTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="15dip"
+          android:layout_alignParentLeft="true"
+          android:text="@string/amount_title"
+          android:layout_marginLeft="10dip"/>
 
-        <Switch
-            android:id="@+id/statusReminderSwitch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dip" />
+      <View
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_weight="1"/>
 
-        <TextView
-            android:id="@+id/statusReminderNumberTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/statusReminderLabelTextView"
-            android:layout_marginTop="15dip"
-            android:layout_alignParentLeft="true"
-            android:text="Number:"
-            android:layout_marginLeft="10dip" />
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/fragment_main_layout_less_then"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="15dip"
-            android:layout_marginRight="10dip"
-            android:layout_below="@+id/statusReminderSwitch"
-            android:id="@+id/statusReminderNumberSpinner"/>
+      <Spinner
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:dropDownWidth="70dip"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="15dip"
+          android:layout_marginRight="10dip"
+          android:id="@+id/statusReminderNumberSpinner"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/statusReminderNumberTextView"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="10dip"
-            android:layout_marginLeft="10dip"
-            android:text="Time:"
-            android:id="@+id/statusReminderTimeTextView"/>
+    </LinearLayout>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="15dip"
-            android:layout_marginRight="10dip"
-            android:layout_below="@+id/statusReminderNumberSpinner"
-            android:id="@+id/statusReminderTimeSpinner"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberLayout"
+        android:orientation="horizontal"
+        android:id="@+id/timeLayout">
 
-    </RelativeLayout>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_marginTop="10dip"
+          android:layout_marginLeft="10dip"
+          android:text="@string/time_title"
+          android:id="@+id/statusReminderTimeTextView"/>
+
+      <View
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+      />
+
+      <Button
+          android:id="@+id/statusReminderTimeButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="15dip"
+          android:layout_marginRight="10dip"
+          android:text="@string/time_button_init"/>
+
+    </LinearLayout>
+
+  </RelativeLayout>
 
 </RelativeLayout>

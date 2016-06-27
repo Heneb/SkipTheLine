@@ -5,6 +5,8 @@ import definition.AbstractStorableObject;
 import definition.fields.*;
 
 /**
+ * Object für das Speichern einzelner Warteschlangeneinträge
+ *
  * @author Benedikt Höft on 21.06.16.
  */
 @StorableObject(fieldName = "queue", boxName = "queue")
